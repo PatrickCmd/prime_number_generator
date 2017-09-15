@@ -7,4 +7,7 @@ def generate_primes(lower_limit, upper_limit):
 
     if not isinstance(lower_limit, int) or not isinstance(upper_limit, 
       int):
-        raise ValueError("Both interval values must be integers")  
+        raise ValueError("Both interval values must be integers")
+
+    if lower_limit < 0 or upper_limit < 0:
+        return "all limit intervals must be positive"  
